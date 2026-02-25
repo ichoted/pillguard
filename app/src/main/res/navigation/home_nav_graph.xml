@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.chocoding.pillguard.DashboardFragment"
+        android:label="PillGuard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.chocoding.pillguard.CameraFragment"
+        android:label="Scan"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_cameraFragment_to_medicineDetailFragment"
+            app:destination="@id/medicineDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.chocoding.pillguard.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_treatmentHistoryFragment"
+            app:destination="@id/treatmentHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/medicineDetailFragment"
+        android:name="com.chocoding.pillguard.MedicineDetailFragment"
+        android:label="Medicine Detail"
+        tools:layout="@layout/fragment_medicine_detail" />
+
+    <fragment
+        android:id="@+id/searchMedicineFragment"
+        android:name="com.chocoding.pillguard.SearchMedicineFragment"
+        android:label="Search Medicine"
+        tools:layout="@layout/fragment_search_medicine" />
+
+    <fragment
+        android:id="@+id/treatmentHistoryFragment"
+        android:name="com.chocoding.pillguard.TreatmentHistoryFragment"
+        android:label="Treatment History"
+        tools:layout="@layout/fragment_treatment_history" />
+</navigation>
