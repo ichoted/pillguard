@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.chocoding.pillguard.AlarmFragment"
+        android:label="Alarm"
+        tools:layout="@layout/fragment_alarm" />
+
+    <fragment
         android:id="@+id/cameraFragment"
         android:name="com.chocoding.pillguard.CameraFragment"
         android:label="Scan"

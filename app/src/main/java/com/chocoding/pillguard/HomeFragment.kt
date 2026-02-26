@@ -18,7 +18,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         // Connect Toolbar with NavController
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.dashboardFragment, R.id.cameraFragment, R.id.profileFragment)
+            setOf(R.id.dashboardFragment, R.id.alarmFragment, R.id.cameraFragment, R.id.profileFragment)
         )
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
 

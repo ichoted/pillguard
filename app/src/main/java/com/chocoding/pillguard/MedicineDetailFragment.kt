@@ -14,5 +14,11 @@ class MedicineDetailFragment : BaseFragment<FragmentMedicineDetailBinding>(Fragm
                 binding.ivMedicinePhoto.setImageBitmap(it)
             }
         }
+
+        // Setup related medicine button click
+        binding.btnRelatedMedicine.setOnClickListener {
+            val bottomSheet = RelatedMedicineBottomSheet.newInstance()
+            bottomSheet.show(childFragmentManager, RelatedMedicineBottomSheet.TAG)
+        }
     }
 }
